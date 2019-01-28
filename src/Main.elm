@@ -211,13 +211,14 @@ numberView item model =
 
 showErrors : Model -> Field -> Html Msg
 showErrors model f =
-    span [] [ text (model.errors
-                  |> List.filter (\err -> Tuple.first err == f)
-                  |> List.map Tuple.second
-                  |> List.head
-                  |> Maybe.withDefault ""
-                  )
-        ]
+    div [ class "error" ]
+        [ text (model.errors
+                   |> List.filter (\err -> Tuple.first err == f)
+                   |> List.map Tuple.second
+                   |> List.head
+                   |> Maybe.withDefault ""
+                   )
+            ]
 
 showResult : Model -> Html Msg
 showResult  model =

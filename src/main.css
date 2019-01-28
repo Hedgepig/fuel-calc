@@ -49,3 +49,8 @@ body {
 .result_title {
     margin-right: 5px;
 }
+
+.error {
+    color: red;
+    font-size: 12px;
+}
